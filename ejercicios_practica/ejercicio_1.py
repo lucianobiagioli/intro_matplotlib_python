@@ -12,6 +12,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+    
+
+
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     print("Line Plot")
@@ -34,5 +37,15 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
+
+    fig = plt.figure()
+    fig.suptitle('Grafico de y en funcion de x', fontsize=16)
+    ax = fig.add_subplot()
+
+    ax.plot(x, y, color = 'r', marker = '^', label = "y = x^2")
+    ax.set_facecolor('whitesmoke')
+    ax.grid()
+    ax.legend()
+    plt.show()
 
     print("terminamos")
